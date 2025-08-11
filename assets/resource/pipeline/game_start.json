@@ -1,0 +1,55 @@
+{
+    "game_launch": {
+        "recognition": "TemplateMatch",
+        "template": "girlsfrontline.png",
+        "roi": [
+            342,
+            460,
+            156,
+            156
+        ],
+        "action": "StartApp",
+        "package": "tw.txwy.and.snqx",
+        "next": [
+            "game_start"
+        ],
+        "timeout": 20000,
+        "interrupt": [
+            "update_check"
+        ]
+    },
+    "update_check": {
+        "recognition": "OCR",
+        "roi": [
+            345,
+            157,
+            588,
+            62
+        ],
+        "expected": "檢測到有資源檔需要更新，是否繼續？",
+        "action": "Click",
+        "target": [
+            737,
+            467,
+            158,
+            60
+        ]
+    },
+    "game_start": {
+        "recognition": "TemplateMatch",
+        "template": "title.png",
+        "roi": [
+            0,
+            29,
+            519,
+            206
+        ],
+        "action": "Click",
+        "target": [
+            514,
+            584,
+            251,
+            86
+        ]
+    }
+}

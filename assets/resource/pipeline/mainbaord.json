@@ -1,0 +1,57 @@
+{
+    "battle": {
+        "recognition": "TemplateMatch",
+        "template": "battle.png",
+        "roi": [
+            863,
+            349,
+            195,
+            145
+        ],
+        "action": "Click"
+    },
+    "team": {
+        "recognition": "TemplateMatch",
+        "template": "team.png",
+        "roi": [
+            1029,
+            347,
+            201,
+            147
+        ],
+        "action": "Click"
+    },
+    "research": {
+        "recognition": "TemplateMatch",
+        "template": "research.png",
+        "roi": [
+            886,
+            227,
+            186,
+            141
+        ],
+        "action": "Click"
+    },
+    "factory": {
+        "recognition": "TemplateMatch",
+        "template": "factory.png",
+        "roi": [
+            1046,
+            225,
+            290,
+            144
+        ],
+        "action": "Click"
+    },
+    "base": {
+        "recognition": "TemplateMatch",
+        "template": "base.png",
+        "roi": [
+            927,
+            112,
+            187,
+            142
+        ],
+        "action": "Click"
+    }
+}
