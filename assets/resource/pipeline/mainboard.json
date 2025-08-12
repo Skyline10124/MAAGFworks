@@ -1,57 +1,87 @@
 {
     "battle": {
-        "recognition": "TemplateMatch",
-        "template": "battle.png",
-        "roi": [
-            863,
-            349,
-            195,
-            145
-        ],
-        "action": "Click"
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "mainboard/battle.png",
+                "roi": [
+                    863,
+                    349,
+                    195,
+                    145
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+        }
     },
     "team": {
-        "recognition": "TemplateMatch",
-        "template": "team.png",
-        "roi": [
-            1029,
-            347,
-            201,
-            147
-        ],
-        "action": "Click"
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "mainboard/team.png",
+                "roi": [
+                    1029,
+                    347,
+                    201,
+                    147
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+        }
     },
     "research": {
-        "recognition": "TemplateMatch",
-        "template": "research.png",
-        "roi": [
-            886,
-            227,
-            186,
-            141
-        ],
-        "action": "Click"
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "mainboard/research.png",
+                "roi": [
+                    886,
+                    227,
+                    186,
+                    141
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+        }
     },
     "factory": {
-        "recognition": "TemplateMatch",
-        "template": "factory.png",
-        "roi": [
-            1046,
-            225,
-            290,
-            144
-        ],
-        "action": "Click"
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "mainboard/factory.png",
+                "roi": [
+                    1046,
+                    225,
+                    290,
+                    144
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+        }
     },
     "base": {
-        "recognition": "TemplateMatch",
-        "template": "base.png",
-        "roi": [
-            927,
-            112,
-            187,
-            142
-        ],
-        "action": "Click"
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "mainboard/base.png",
+                "roi": [
+                    1046,
+                    225,
+                    290,
+                    144
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+        }
     }
 }

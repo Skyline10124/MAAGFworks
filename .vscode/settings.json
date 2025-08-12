@@ -38,5 +38,11 @@
     "[markdown]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "json.validate.enable": true,
+    "workbench.colorCustomizations": {
+        "editorWarning.foreground": "#ffffff21",
+        "editorError.foreground": "#FF0000",
+        "editorInfo.foreground": "#0084ff"
     }
 }
