@@ -14,7 +14,9 @@
         ],
         "timeout": 30000,
         "interrupt": [
-            "update_check"
+            "update_check",
+            "net_403",
+            "net_102"
         ]
     },
     "update_check": {
@@ -27,7 +29,11 @@
                     588,
                     62
                 ],
-                "expected": "檢測到有資源檔需要更新，是否繼續？"
+                "expected": [
+                    "資源檔",
+                    "更新",
+                    "繼續"
+                ]
             }
         },
         "action": {
@@ -46,7 +52,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "title.png",
+                "template": "game_start/title.png",
                 "roi": [
                     0,
                     29,
@@ -70,13 +76,16 @@
             "daily_reward",
             "quit_logistics"
         ],
+        "interrupt": [
+            "net_502"
+        ],
         "timeout": 20000
     },
     "daily_reward": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "daily_reward.png",
+                "template": "game_start/daily_reward.png",
                 "roi": [
                     34,
                     162,
@@ -105,7 +114,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "quit_event.png",
+                "template": "game_start/quit_event.png",
                 "roi": [
                     12,
                     0,
@@ -125,7 +134,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "quit_logistics.png",
+                "template": "game_start/quit_logistics.png",
                 "roi": [
                     0,
                     0,
@@ -137,5 +146,99 @@
         "action": {
             "type": "Click"
         }
+    },
+    "net_403": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "伺服器",
+                    "網路連接",
+                    "403"
+                ],
+                "roi": [
+                    263,
+                    252,
+                    748,
+                    188
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    557,
+                    487,
+                    160,
+                    59
+                ]
+            }
+        }
+    },
+    "net_102": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "資料配置",
+                    "網路",
+                    "102"
+                ],
+                "roi": [
+                    324,
+                    206,
+                    629,
+                    115
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    662,
+                    464,
+                    160,
+                    58
+                ]
+            }
+        }
+    },
+    "net_502": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "連接",
+                    "逾時"
+                ],
+                "roi": [
+                    563,
+                    340,
+                    156,
+                    56
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    557,
+                    488,
+                    160,
+                    58
+                ]
+            }
+        },
+        "next": [
+            "game_start"
+        ],
+        "interrupt": [
+            "net_403",
+            "net_102"
+        ],
+        "timeout": 10000
     }
 }

@@ -83,5 +83,193 @@
         "action": {
             "type": "Click",
         }
+    },
+    "back": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "mainboard/back.png",
+                "roi": [
+                    45,
+                    0,
+                    126,
+                    143
+                ]
+            }
+        },
+        "action": "Click",
+        "post_wait_delay": 1000
+    },
+    "combat_info": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "作戰設置",
+                "roi": [
+                    301,
+                    27,
+                    264,
+                    155
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    889,
+                    561,
+                    211,
+                    69
+                ]
+            }
+        }
+    },
+    "bank_emerg": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "床位不足",
+                "roi": [
+                    234,
+                    183,
+                    128,
+                    40
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    804,
+                    506,
+                    183,
+                    35
+                ]
+            }
+        },
+        "next": [
+            "select0"
+        ]
+    },
+    "select0": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    235,
+                    147,
+                    152,
+                    510
+                ]
+            }
+        },
+        "next": [
+            "select1"
+        ]
+    },
+    "select1": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    30,
+                    116,
+                    153,
+                    275
+                ]
+            }
+        },
+        "next": [
+            "select2"
+        ]
+    },
+    "select2": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    472,
+                    158,
+                    164,
+                    97
+                ]
+            }
+        },
+        "next": [
+            "select3"
+        ]
+    },
+    "select3": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1098,
+                    613,
+                    160,
+                    82
+                ]
+            }
+        },
+        "next": [
+            "select4"
+        ]
+    },
+    "select4": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1098,
+                    613,
+                    160,
+                    82
+                ]
+            }
+        },
+        "next": [
+            "select5"
+        ]
+    },
+    "select5": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1095,
+                    602,
+                    158,
+                    58
+                ]
+            }
+        },
+        "next": [
+            "stren_check"
+        ]
+    },
+    "stren_check": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "指揮官",
+                    "強化"
+                ],
+                "roi": [
+                    524,
+                    158,
+                    164,
+                    44
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": "back"
+            }
+        }
     }
 }

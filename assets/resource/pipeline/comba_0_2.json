@@ -1,0 +1,95 @@
+{
+    "combat": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "combat_0_2/combat.png",
+                "roi": [
+                    863,
+                    349,
+                    195,
+                    145
+                ]
+            }
+        },
+        "action": "Click",
+        "next": [
+            "to_ep0"
+        ],
+        "post_wait_freezes": {
+            "time": 1500,
+            "threshold": 0.8
+        }
+    },
+    "to_ep0": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "combat_0_2/ep0.png",
+                "roi": [
+                    181,
+                    98,
+                    134,
+                    617
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    236,
+                    218,
+                    1,
+                    1
+                ],
+                "end": [
+                    236,
+                    600,
+                    1,
+                    1
+                ],
+                "duration": 100
+            }
+        },
+        "inverse": true,
+        "next": [
+            "ep0"
+        ]
+    },
+    "ep0": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "combat_0_2/ep0.png",
+                "roi": [
+                    181,
+                    98,
+                    134,
+                    617
+                ],
+                "threshold": 0.95
+            }
+        },
+        "action": "Click",
+        "next": [
+            "combat_0_2"
+        ]
+    },
+    "combat_0_2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "combat_0_2/combat_0_2.png",
+                "roi": [
+                    604,
+                    375,
+                    222,
+                    126
+                ]
+            }
+        },
+        "action": "Click"
+    }
+}
